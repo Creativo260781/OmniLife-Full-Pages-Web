@@ -1,0 +1,594 @@
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-size: 4rem;
+    font-weight: 700;
+    color: orange;
+}
+.texto-blanco {
+    font-size: 35px;
+    font-weight: 700;
+    color: rgb(224, 218, 218);
+}
+.texto-negro {
+	color: #000;
+}
+.texto-cafe {
+    font-size: 50px;
+    font-weight: 700;
+    color: brown;
+}
+.texto-morado {
+    font-size: 40;
+    font-weight: 400;
+	color: rgb(180, 3, 250);
+}
+
+/* ------------------------- */
+/* Clases de Fullpage.js */
+/* ------------------------- */
+#fp-nav ul li a span {
+    background: rgb(255, 145, 0);
+}
+#fp-nav ul li .fp-tooltip {
+    color: rgb(255, 145, 0);
+}
+/* ------------------------- */
+/* Menu de Navegacion */
+/* ------------------------- */
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 70;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.nav li,
+.nav a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
+    color: #c2c2c2;
+    transition: .5s ease;
+}
+
+.nav li.active {
+    border-bottom: 2px solid orange;
+}
+
+.menu li a {
+    transition: .5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li.active a,
+.menu li:hover a {
+    color: orange;
+}
+#texto_nav{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+#texto_nav_2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+/* ------------------------- */
+/* Header */
+/* ------------------------- */
+.header {
+    background-image: url(../media/imagen01.png);
+    background-position: center;
+}
+
+.header .contenedor-titulo {
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo {
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono {
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+.footer .contenedor-icono_footer {
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 95%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+.contenedor-icono_productos{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 40px;
+    animation: bajar-subir 1s ease infinite;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: rgb(255, 255, 255);
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+/*--------------------------------*/
+/*        para el adio             */
+/*--------------------------------*/
+audio{
+    height: 25px;
+    width: 150px;
+    position: absolute;
+    left: 82.5%;
+    top: 91.5%;
+    z-index: 99;
+} 
+
+/* ------------------------- */
+/* Animaciones */
+/* ------------------------- */
+@keyframes bajar-subir {
+    0% { transform: translateY(20px); }
+    25% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+/* ------------------------- */
+/* Productos */
+/* ------------------------- */
+.productos article { 
+    background-position: center;
+    background-size: cover;
+}
+
+.productos article:nth-child(1) {
+    background-image: url('../media/Imagen\(\ 1200px\)1.png');
+    background-size: cover;
+}
+
+.productos article:nth-child(2) {
+    background-size: cover;
+    background-image: url('../media/Imagen\(\ 1200px\)2.png');
+}
+
+.productos article:nth-child(3) {
+    background-size: cover;
+    background-image: url('../media/Imagen\(\ 1200px\)3.png');
+}
+
+.productos .informacion-producto {
+    margin: 0 30px;
+}
+
+.productos .informacion-producto::before {
+    content: "";
+    height: 150px;
+    width: 3px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+
+.productos .modelo {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.productos .descripcion {
+    font-size: 50px;
+    font-weight: 600;
+    color: orange;
+}
+
+.productos .precio {
+    font-size: 35px;
+    color: orange;
+}
+
+.productos .precio::before {
+    content: "C$";
+    display: inline-block;
+}
+.slide .producto_1{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    right: 89%;
+    bottom: 20%px;
+}
+.slide .producto_2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 37%;
+}
+.slide .producto_3{
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    top: 60%;
+    right: 23%;
+}
+
+/* ------------------------- */
+/* Clases de fullpage.js - Flechas de Slide */
+/* ------------------------- */
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent rgb(255, 60, 0) transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    left: 95%;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent rgb(255, 60, 0);
+}
+
+/* ------------------------- */
+/* Footer */
+/* ------------------------- */
+.footer .texto-naranja {
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.footer h2 {
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+    transition: 1s ease all;
+}
+
+.footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+.footer .redes-sociales a {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    color: #30313A;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0 20px;
+}
+
+.footer .facebook i { color: #3b5998; }
+.footer .twitter i { color: #1da1f2; }
+.footer .instagram i { color: #c13584; }
+
+.footer .facebook:hover { background: #3b5998; }
+.footer .twitter:hover { background: #1da1f2; }
+.footer .instagram:hover { background: #c13584; }
+
+.footer .facebook:hover i { color: #fff; }
+.footer .twitter:hover i { color: #fff; }
+.footer .instagram:hover i { color: #fff; }
+
+/* ------------------------- */
+/* Mediaqueries */
+/* ------------------------- */
+@media screen and (max-width: 768px) {
+    .menu li a,
+    .menu li.active a {
+        font-size: 8px;
+    }
+    .modelo {
+        font-size: 10px;
+    }
+    .precio {
+        font-size: 13px;
+    }
+    .footer h2 {
+        font-size: 15px;
+    }
+    .footer .redes-sociales {
+        font-size: 20px;
+    }
+    .footer .redes-sociales a {
+        width: 70px;
+        height: 70px;
+    }
+
+    .texto-naranja {
+        font-size: 3rem;
+        font-weight: 700;
+        color: orange;
+    }
+    .texto-blanco {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(224, 218, 218);
+    }
+    .texto-negro {
+        font-size: 3rem;
+        color: #000;
+    }
+    .texto-cafe {
+        font-size: 50px;
+        font-weight: 700;
+        color: brown;
+    }
+    .texto-morado {
+        font-size: 3rem;
+        font-weight: 400;
+        color: rgb(180, 3, 250);
+    }
+    audio{
+        height: 25px;
+        width: 150px;
+        position: absolute;
+        left: 75%;
+        bottom: .9%;
+        z-index: 99;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 70.8%;
+        border-width: 20px 20px 20px 0;
+        border-color: transparent rgb(255, 60, 0) transparent transparent;
+    }
+    
+    .fp-controlArrow.fp-next {
+       left: 95.8%;
+        border-width: 20px 0 20px 20px;
+        border-color: transparent transparent transparent rgb(255, 60, 0);
+    }
+    .productos article:nth-child(1) {
+        background-image: url('../media/Mobiles\(770px\)1.png');
+        background-size: cover;
+    }
+    
+    .productos article:nth-child(2) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(770px\)2.png');
+    }
+    
+    .productos article:nth-child(3) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(770px\)3.png');
+    }
+    .slide .producto_1{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        right: 88%;
+        bottom: 20%px;
+    }
+    .slide .producto_2{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 33%;
+    }
+    .slide .producto_3{
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        top: 60%;
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header .titulo {
+        font-size: 70px;
+    }
+
+    .informacion-producto {
+        position: absolute;
+        top: 40%;
+    }
+
+    audio{
+        height: 25px;
+        width: 150px;
+        position: absolute;
+        left: 68%;
+        bottom: .9%;
+        z-index: 99;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 63%;
+        border-width: 20px 20px 20px 0;
+        border-color: transparent rgb(255, 60, 0) transparent transparent;
+    }
+    
+    .fp-controlArrow.fp-next {
+       left: 95.8%;
+        border-width: 20px 0 20px 20px;
+        border-color: transparent transparent transparent rgb(255, 60, 0);
+    }
+    .productos article:nth-child(1) {
+        background-image: url('../media/Mobiles\(576px\)1.png');
+        background-size: cover;
+    }
+    
+    .productos article:nth-child(2) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(576px\)2.png');
+    }
+    
+    .productos article:nth-child(3) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(576px\)3.png');
+    }
+    .slide .producto_1{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 10%;
+        top: 95%;
+    }
+    .slide .producto_2{
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        left: 10%;
+    }
+    .slide .producto_3{
+        position: absolute;
+        width: 330px;
+        height: 330px;
+        top: 60%;
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav {
+        display: block;
+        text-align: right;
+    }
+
+    .nav a {
+        font-size: 19px;
+        margin-bottom: 0;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: right;
+    }
+
+    .menu li a,
+    .menu li.active a {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .informacion-producto {
+        position: absolute;
+        top: 45%;
+    }
+
+    .productos .modelo {
+        font-size: 50px;
+        bottom: 10%;
+    }
+
+    .footer .texto-naranja {
+        font-size: 30px;
+    }
+
+    .footer .redes-sociales a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer .redes-sociales a i {
+        font-size: 24px;
+    }
+    audio{
+        height: 25px;
+        width: 150px;
+        position: absolute;
+        left: 60%;
+        bottom: .9%;
+        z-index: 99;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 53%;
+        border-width: 20px 20px 20px 0;
+        border-color: transparent rgb(255, 60, 0) transparent transparent;
+    }
+    .fp-controlArrow.fp-next {
+       left: 95.8%;
+        border-width: 20px 0 20px 20px;
+        border-color: transparent transparent transparent rgb(255, 60, 0);
+    }
+    .productos article:nth-child(1) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(450px\)1.png');
+    }
+    .productos article:nth-child(2) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(450px\)2.png');
+    }
+    .productos article:nth-child(3) {
+        background-size: cover;
+        background-image: url('../media/Mobiles\(450px\)3.png');
+    }
+    .slide .producto_1{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 0;
+        bottom: 20%px;
+    }
+    .slide .producto_2{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 3%;
+    }
+    .slide .producto_3{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 60%;
+        right: 14%;
+    }
+
+}
